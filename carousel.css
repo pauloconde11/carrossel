@@ -1,0 +1,85 @@
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+}
+
+.image-slider {
+    min-height: 30em;
+    height: 100vh;
+    position: relative;
+    background-image: url("IMG/img1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s;
+} 
+
+.image-slider *{
+    box-sizing: border-box;
+}
+
+.caption {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        #000
+    );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 4em 1em 2em 1em;
+    text-align: center;
+}
+
+.caption h1{
+    margin: 0;
+    color: #fff;
+}
+
+p{
+    color: #8a8a8a;
+}
+
+.arrow-left,
+.arrow-right{
+    background: #ffffff38;
+    position: absolute;
+    top: 40%;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.arrow-left:hover,
+.arrow-right:hover {
+background: #00000052;
+color: #ffffff;
+
+}
+
+.arrow-left{
+    left: 1em;
+}
+
+.arrow-right{
+    right: 1em;
+}
+
+/*classe pra javascript alternar*/
+
+.image-fade {
+    animation: imgFade 0.5s ease-in-out;
+}
+
+@keyframes imgFade {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
